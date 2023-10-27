@@ -4645,8 +4645,15 @@ nav#desktop-nav li.has-child-menu:hover ul.thired-level {
   }
 }
 .video-content {
+  display: flex;
+  gap : 40px;
   position: relative;
   text-align: center;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .video-content {
+    flex-direction: column;
+  }
 }
 .video-content .video-title {
   letter-spacing: 1px;
@@ -4655,6 +4662,27 @@ nav#desktop-nav li.has-child-menu:hover ul.thired-level {
   text-align: center;
   margin-bottom: 10px;
 }
+
+/* @media (min-width: 768px) and (max-width: 991px) {
+  .lecturers-area {
+    padding: 68px 0 80px;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .lecturers-area {
+    padding: 58px 0 70px;
+  }
+}
+@media (min-width: 321px) and (max-width: 479px) {
+  .lecturers-area {
+    padding: 48px 0 50px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .lecturers-area {
+    padding: 38px 0 40px;
+  }
+} */
 @media only screen and (max-width: 480px) {
   .video-content .video-title {
     font-size: 30px;
