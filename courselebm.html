@@ -53,6 +53,67 @@
 
         gtag('config', 'G-D0JM06KZYK');
     </script>
+    <!-- <script>
+        const form = document.getElementById("checkout-form");
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            let form = e.currentTarget;
+
+            //Get URL for api endpoint
+            let url = form.action;
+
+            try {
+                //Form field instance
+                let formFields = new FormData(form)
+
+                //Call the `postFormFieldsJson()` function 
+                let responseData = await postFormFieldsAsJson({ url, formFields });
+                if (responseData.data.status) {
+                    alert("admissoion form successfully submitted we will get back to you shortly");
+                } else {
+                    alert("Failed to submit admission form. Please try again.");
+                }
+            } catch (error) {
+                // Handle the error here.
+                console.error(`An has occured ${error}`);
+            }
+        });
+        async function postFormFieldsAsJson({ url, formData }) {
+            //Create an object from the form data entries
+            let formDataObject = Object.fromEntries(formData.entries());
+            // Format the plain form data as JSON
+            let formDataJsonString = JSON.stringify(formDataObject);
+
+            //Set the fetch options (headers, body)
+            let fetchOptions = {
+                //HTTP method set to POST.
+                method: "POST",
+                //Set the headers that specify you're sending a JSON body request and accepting JSON response
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json",
+                },
+                // POST request body as JSON string.
+                body: formDataJsonString,
+            };
+
+            //Get the response body as JSON.
+            //If the response was not OK, throw an error.
+            let res = await fetch(url, fetchOptions);
+
+            //If the response is not ok throw an error (for debugging)
+            if (!res.ok) {
+                let error = await res.text();
+                throw new Error(error);
+
+                // Parse the JSON response
+                let responseData = await res.json();
+            }
+            //If the response was OK, return the response body.
+            return responseData;
+        }
+    </script> -->
+
 </head>
 
 <body>
@@ -255,39 +316,25 @@
             </div>
         </div>
         <!-- About Page 3 Area Start Here -->
-        <div class="about-page3-area">
-            <div class="container">
-                <div class="row about-page3-inner">
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                        <div class="about-box">
-                            <h2 class="title-bar-medium-left "><a href="#">Enquiry</a></h2>
-                            <p>
-                                For admission Enquiry mail to info@iigminstitute.com
-                                <br> Or Call +919565777770
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         <!-- Inner Page Banner Area End Here -->
         <!-- Registration Page Area Start Here -->
-        <!-- <div class="registration-page-area">
+        <div class="registration-page-area">
             <div class="container">
                 <h2 class="sidebar-title">Enquiry</h2>
                 <div class="registration-details-area inner-page-padding">
-                    <form id="checkout-form">
+                    <form id="checkout-form" method="post"
+                        action="http://localhost:4000/api/admission/admissionEnquiry">
                         <div class="row">
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                                 <div class="form-group">
-                                    <label class="control-label" for="first-name">First Name *</label>
-                                    <input type="text" id="first-name" class="form-control">
+                                    <label class="control-label" for="first-name">Full Name *</label>
+                                    <input type="text" id="first-name" name="fullName" class="form-control">
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                                 <div class="form-group">
-                                    <label class="control-label" for="last-name">Last Name *</label>
-                                    <input type="text" id="last-name" class="form-control">
+                                    <label class="control-label" for="last-name">Age *</label>
+                                    <input type="text" id="last-name" name="age" class="form-control">
                                 </div>
                             </div>
                         </div>
@@ -295,13 +342,13 @@
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                                 <div class="form-group">
                                     <label class="control-label" for="email">E-mail Address *</label>
-                                    <input type="text" id="email" class="form-control">
+                                    <input type="text" id="email" name="email" class="form-control">
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                                 <div class="form-group">
                                     <label class="control-label" for="phone">Phone *</label>
-                                    <input type="text" id="phone" class="form-control">
+                                    <input type="text" id="phone" name="phone" class="form-control">
                                 </div>
                             </div>
                         </div>
@@ -310,22 +357,22 @@
                                 <div class="form-group">
                                     <label class="control-label" for="country">Country</label>
                                     <div class="custom-select">
-                                        <select id="country" class='select2'>
-                                            <option value="0">Select your country</option>
-                                            <option value="3">India</option>
-                                            <option value="1">Bangladesh</option>
-                                            <option value="2">Spain</option>
-                                            <option value="3">Belgium</option>
-                                            <option value="3">Ecuador</option>
-                                            <option value="3">Ghana</option>
-                                            <option value="3">South Africa</option>
-                                            <option value="3">Pakistan</option>
-                                            <option value="3">Thailand</option>
-                                            <option value="3">Malaysia</option>
-                                            <option value="3">Italy</option>
-                                            <option value="3">Japan</option>
-                                            <option value="4">Germany</option>
-                                            <option value="5">USA</option>
+                                        <select id="country" name="country" class='select2'>
+                                            <option value="None Selected">Select your country</option>
+                                            <option value="India">India</option>
+                                            <option value="Bangladesh">Bangladesh</option>
+                                            <option value="Spain">Spain</option>
+                                            <option value="Belgium">Belgium</option>
+                                            <option value="Ecuador">Ecuador</option>
+                                            <option value="Ghana">Ghana</option>
+                                            <option value="SOuth Africa">South Africa</option>
+                                            <option value="Pakistan">Pakistan</option>
+                                            <option value="Thailand">Thailand</option>
+                                            <option value="Malaysia">Malaysia</option>
+                                            <option value="Italy">Italy</option>
+                                            <option value="Japan">Japan</option>
+                                            <option value="Germany">Germany</option>
+                                            <option value="USA">USA</option>
                                         </select>
                                     </div>
                                 </div>
@@ -333,31 +380,72 @@
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                                 <div class="form-group">
                                     <label class="control-label" for="town-city">Town / City</label>
-                                    <input type="text" id="town-city" class="form-control">
+                                    <input type="text" id="town-city" name="city" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <label class="control-label" for="country">Select Course</label>
+                                    <div class="custom-select">
+                                        <select id="course" name="course" class='select2'>
+                                            <option value="None">Select your course</option>
+                                            <option value="Commercial Goat Farming And Management">Commercial Goat
+                                                Farming and Management</option>
+                                            <option value="Livestock Entrepreneurship And Business Management">Livestock
+                                                Entrepreneurship And Business Management
+                                            </option>
+                                            <option value="Livestock Based Livelihoods Project Management (LLPM)">
+                                                Livestock Based Livelihoods Project Management (LLPM)
+                                            </option>
+                                            <option value="Goat Value Chain Management">Goat Value Chain Management
+                                            </option>
+                                            <option value="Diploma in Livestock Entrepreneurship and Business
+                                            Management">Diploma in Livestock Entrepreneurship and Business
+                                                Management</option>
+
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <label class="control-label" for="town-city">Mode of course</label>
+                                    <div class="custom-select">
+                                        <select id="course" name="mode" class='select2'>
+                                            <option value="None">Select your course type</option>
+                                            <option value="Online">Online</option>
+                                            <option value="Residential">Residential</option>
+                                            <option value="Hybrid">Hybrid</option>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                                 <div class="form-group">
-                                    <label class="control-label">About Me</label>
-                                    <textarea name="about-me" type="text" id="address-line1" class="form-control" rows="5"></textarea>
+                                    <label class="control-label">About Me(optional)</label>
+                                    <textarea name="about" type="text" id="address-line1" class="form-control"
+                                        rows="5"></textarea>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                                 <div class="pLace-order mt-30">
-                                    <button class="view-all-accent-btn disabled" type="submit" value="Login">Submit</button>
+                                    <button class="view-all-accent-btn disabled" type="button" id="submit-btn"
+                                       >Submit</button>
                                 </div>
                             </div>
                         </div>
                     </form>
                 </div>
             </div>
-        </div> -->
+        </div>
         <!-- Registration Page Area End Here -->
-        <!-- Footer Area Start Here -->
+        <!-- <!Footer Area Start Here -->
         <footer>
             <div class="footer-area-top">
                 <div class="container">
@@ -397,9 +485,9 @@
                                         <ul>
                                             <li><a href="#">Courses</a></li>
                                             <li><a href="#">About Us</a></li>
-                                           <li><a href="privacypolicy.html">Privacy Policy</a></li>
-                                                      <li><a href="refundpolicy.html">Refund Policy</a></li>
-                                                                           </ul>
+                                            <li><a href="privacypolicy.html">Privacy Policy</a></li>
+                                            <li><a href="refundpolicy.html">Refund Policy</a></li>
+                                        </ul>
                                     </li>
                                 </ul>
                             </div>
@@ -410,7 +498,8 @@
                                 <ul class="corporate-address">
                                     <li><i class="fa fa-phone" aria-hidden="true"></i><a href="Phone:(01)800433633">
                                             9565777770 </a></li>
-                                    <li><i class="fa fa-envelope-o" aria-hidden="true"></i>info@iigminstitute.com</li>
+                                    <li><i class="fa fa-envelope-o" aria-hidden="true"></i>info@iigminstitute.com
+                                    </li>
                                 </ul>
                                 <div class="newsletter-area">
                                     <h3>Newsletter</h3>
@@ -502,6 +591,68 @@
     <script src="js/jquery.magnific-popup.min.js" type="text/javascript"></script>
     <!-- Custom Js -->
     <script src="js/main.js" type="text/javascript"></script>
+    <script>
+        const submitButton = document.getElementById("submit-btn");
+        // console.log('submit',submitButton);
+        submitButton.addEventListener("click", async () => {
+
+            // event.preventDefault();
+            // console.log('click');
+    
+            // Assuming the form has an ID of "checkout-form"
+            const form = document.getElementById("checkout-form");
+    
+            // Get URL for the API endpoint
+            const url = form.action;
+    
+            try {
+                // Form field instance
+                const formFields = new FormData(form);
+                // console.log('formfield',formFields);
+    
+                // Call the `postFormFieldsAsJson()` function 
+                const responseData = await postFormFieldsAsJson({ url, formFields });
+    
+                if (responseData.status) {
+                    alert("Admission form successfully submitted. We will get back to you shortly.");
+                } else {
+                    alert("Failed to submit admission form. Please try again.");
+                }
+            } catch (error) {
+                // Handle the error here.
+                console.error(`An error has occurred: ${error}`);
+            }
+            return false;
+        });
+    
+        async function postFormFieldsAsJson({ url, formFields }) {
+            // Create an object from the form data entries
+            const formDataObject = Object.fromEntries(formFields.entries());
+    
+            // Format the plain form data as JSON
+            const formDataJsonString = JSON.stringify(formDataObject);
+    
+            // Set the fetch options (headers, body)
+            const fetchOptions = {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: formDataJsonString,
+            };
+    
+            // Get the response body as JSON
+            // If the response was not OK, throw an error
+            const res = await fetch(url, fetchOptions);
+            // console.log(res);
+                        // If the response is not ok, throw an error (for debugging)
+            if (!res.ok) {
+                const error = await res.text();
+                throw new Error(error);
+            }
+            return res;
+        }
+    </script>    
 </body>
 
 
