@@ -615,6 +615,7 @@
     
                 if (responseData.status) {
                     alert("Admission form successfully submitted. We will get back to you shortly.");
+                    form.reset();
                 } else {
                     alert("Failed to submit admission form. Please try again.");
                 }
@@ -622,7 +623,7 @@
                 // Handle the error here.
                 console.error(`An error has occurred: ${error}`);
             }
-            return false;
+            // return false;
         });
     
         async function postFormFieldsAsJson({ url, formFields }) {
