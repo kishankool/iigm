@@ -10320,3 +10320,34 @@ ul.course-feature2 li:before {
 #whatsapp-icon img:hover {
   transform: scale(1.1);
 }
+
+.cookie-dialog {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #002147;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  z-index: 999999;
+}
+
+.cookie-dialog p {
+  margin: 0;
+  font-size: 14px;
+}
+
+#acceptCookiesBtn {
+  background-color: #fdc800;
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  cursor: pointer;
+}

@@ -249,6 +249,11 @@
             </a>
         </div>
 
+        <div id="cookieDialog" class="cookie-dialog">
+            <p>This website uses cookies to ensure you get the best experience on our website.</p>
+            <button id="acceptCookiesBtn">Accept Cookies</button>
+        </div>
+
         <!-- Slider 1 Area Start Here -->
         <div class="slider1-area overlay-default">
             <div class="bend niceties preview-1">
@@ -895,14 +900,14 @@
                                         <ul>
                                             <li><a href="#">Courses</a></li>
                                             <li><a href="#">About Us</a></li>
-                                           <li><a href="privacypolicy.html">Privacy Policy</a></li>
-                                                      <li><a href="refundpolicy.html">Refund Policy</a></li>
-                                                                           </ul>
+                                            <li><a href="privacypolicy.html">Privacy Policy</a></li>
+                                            <li><a href="refundpolicy.html">Refund Policy</a></li>
+                                        </ul>
                                     </li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <div class="col-xl-3 co l-lg-3 col-md-6 col-sm-12">
                             <div class="footer-box">
                                 <h3>Information</h3>
                                 <ul class="corporate-address">
@@ -993,6 +998,33 @@
     <script src="js/jquery.gridrotator.js" type="text/javascript"></script>
     <!-- Custom Js -->
     <script src="js/main.js" type="text/javascript"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Check if the user has accepted cookies before
+            if (!localStorage.getItem('cookiesAccepted')) {
+                // Show the cookie dialog if not accepted
+                showCookieDialog();
+            }
+
+            // Add click event listener to the "Accept Cookies" button
+            document.getElementById('acceptCookiesBtn').addEventListener('click', function () {
+                // Hide the cookie dialog
+                hideCookieDialog();
+
+                // Set a flag in localStorage to remember that the user has accepted cookies
+                localStorage.setItem('cookiesAccepted', true);
+            });
+        });
+
+        function showCookieDialog() {
+            document.getElementById('cookieDialog').style.display = 'block';
+        }
+
+        function hideCookieDialog() {
+            document.getElementById('cookieDialog').style.display = 'none';
+        }
+
+    </script>
 </body>
 
 
