@@ -500,18 +500,18 @@
         });
 
     /* login pop up foem */
-    $('#login-button').on('click', function(e) {
-        e.preventDefault();
-        var self = $(this),
-            target = self.next('#login-form');
-        if (self.hasClass('open')) {
-            target.slideUp('slow');
-            self.removeClass('open');
-        } else {
-            target.slideDown('slow');
-            self.addClass('open');
-        }
-    });
+    // $('#login-button').on('click', function(e) {
+    //     e.preventDefault();
+    //     var self = $(this),
+    //         target = self.next('#login-form');
+    //     if (self.hasClass('open')) {
+    //         target.slideUp('slow');
+    //         self.removeClass('open');
+    //     } else {
+    //         target.slideDown('slow');
+    //         self.addClass('open');
+    //     }
+    // });
 
     $('#login-form').on('click', '.form-cancel', function(e) {
         e.preventDefault();
