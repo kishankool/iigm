@@ -138,7 +138,7 @@
     /*-------------------------------------
      jQuery MeanMenu activation code
      --------------------------------------*/
-    $('nav#dropdown').meanmenu({ siteLogo: "<a href='index.html' class='logo-mobile-menu'><img  style = 'height : 30px; width:150px' src='img/mobile-logo.jpg'></a>" });
+    $('nav#dropdown').meanmenu({ siteLogo: "<a href='index.html' class='logo-mobile-menu'><img  style = 'height : 30px; width:150px' src='img/mobile-logo.png'></a>" });
 
     /*-------------------------------------
      Wow js Active
