@@ -2,12 +2,12 @@
 <html class="no-js" lang="">
 
 
-<!-- Mirrored from www.IIGM.com/demo/html/academics/academics/about3.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 07 Apr 2023 12:09:49 GMT -->
+<!-- Mirrored from www.IIGM.com/demo/html/academics/academics/registration.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 07 Apr 2023 12:10:21 GMT -->
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>IIGM | About </title>
+    <title>Academics | Registration</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
@@ -32,10 +32,14 @@
     <link rel="stylesheet" href="vendor/slider/css/preview.css" type="text/css" media="screen" />
     <!-- Datetime Picker Style CSS -->
     <link rel="stylesheet" href="css/jquery.datetimepicker.css">
+    <!-- Select2 CSS -->
+    <link rel="stylesheet" href="css/select2.min.css">
     <!-- Magic popup CSS -->
     <link rel="stylesheet" href="css/magnific-popup.css">
     <!-- Switch Style CSS -->
     <link rel="stylesheet" href="css/hover-min.css">
+    <!-- Nouislider Style CSS -->
+    <link rel="stylesheet" href="vendor/noUiSlider/nouislider.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
     <!-- Modernizr Js -->
@@ -49,6 +53,67 @@
 
         gtag('config', 'G-D0JM06KZYK');
     </script>
+    <!-- <script>
+        const form = document.getElementById("checkout-form");
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            let form = e.currentTarget;
+
+            //Get URL for api endpoint
+            let url = form.action;
+
+            try {
+                //Form field instance
+                let formFields = new FormData(form)
+
+                //Call the `postFormFieldsJson()` function 
+                let responseData = await postFormFieldsAsJson({ url, formFields });
+                if (responseData.data.status) {
+                    alert("admissoion form successfully submitted we will get back to you shortly");
+                } else {
+                    alert("Failed to submit admission form. Please try again.");
+                }
+            } catch (error) {
+                // Handle the error here.
+                console.error(`An has occured ${error}`);
+            }
+        });
+        async function postFormFieldsAsJson({ url, formData }) {
+            //Create an object from the form data entries
+            let formDataObject = Object.fromEntries(formData.entries());
+            // Format the plain form data as JSON
+            let formDataJsonString = JSON.stringify(formDataObject);
+
+            //Set the fetch options (headers, body)
+            let fetchOptions = {
+                //HTTP method set to POST.
+                method: "POST",
+                //Set the headers that specify you're sending a JSON body request and accepting JSON response
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json",
+                },
+                // POST request body as JSON string.
+                body: formDataJsonString,
+            };
+
+            //Get the response body as JSON.
+            //If the response was not OK, throw an error.
+            let res = await fetch(url, fetchOptions);
+
+            //If the response is not ok throw an error (for debugging)
+            if (!res.ok) {
+                let error = await res.text();
+                throw new Error(error);
+
+                // Parse the JSON response
+                let responseData = await res.json();
+            }
+            //If the response was OK, return the response body.
+            return responseData;
+        }
+    </script> -->
+
 </head>
 
 <body>
@@ -77,7 +142,7 @@
                                 <div class="header-top-right">
                                     <ul>
                                         <li>
-                                                <a class="login-btn-area" href="https://online.iigminstitute.com/" id="login-button"><i class="fa fa-lock"
+                                                <a class="login-btn-area" href="paymentform.html" id="login-button"><i class="fa fa-lock"
                                                     aria-hidden="true"></i> IIGM Online</a>      
                                             <!-- <div class="login-form" id="login-form" style="display: none;">
                                                 <div class="title-default-left-bold">IIGM Online</div>
@@ -95,7 +160,7 @@
                                         </li>
                                         <li>
                                             <div class="apply-btn-area">
-                                                <a href="#" class="apply-now-btn">Apply Now</a>
+                                                <a href="courselebm.html" class="apply-now-btn">Apply Now</a>
                                             </div>
                                         </li>
                                     </ul>
@@ -148,9 +213,7 @@
                                                     <!-- <li class=""><a href="#">Alumni</a> -->
 
                                                 <li class=""><a href="infrastructure.html">Infrastructure</a>
-                                                <li class=""><a href="placements.html">Placements</a>
-
-
+                                                <li class=""><a href="#">Placements</a>
 
 
                                             </ul>
@@ -196,7 +259,7 @@
                                         </li>
                                         <li><a href="#">Academic Programs</a>
                                             <ul>
-                                                <<li><a href="">Certificate Course</a>
+                                                <<li><a href="certificatecourse.html">Certificate Course</a>
                                         </li>
                                         <li><a href="pgdiploma.html">PG Diploma</a></li>
                                     </ul>
@@ -235,91 +298,154 @@
             <!-- Mobile Menu Area End -->
         </header>
         <!-- Header Area End Here -->
-        <!-- Header Area End Here -->
-        <!-- Inner Page Banner Area Start Here -->
-        <div class="inner-page-banner-area" style="background-image: url('img/banner/5.jpg');">
-            <div class="container">
-                <div class="pagination-area">
-                    <h1>Placements</h1>
-                    <ul>
-                        <li><a href="#">Home</a> -</li>
-                        <li>Placements</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
         <div id="whatsapp-icon">
             <a href="https://api.whatsapp.com/send?phone=9565777770&text=I%20want%20to%20enquire%20about%20courses"
                 target="_blank"> <img src="whatsapp-icon.png" alt="WhatsApp Icon">
             </a>
         </div>
-
-        <!-- About Page 1 Area Start Here -->
-        <div class="about-page1-area">
+        <!-- Inner Page Banner Area Start Here -->
+        <div class="inner-page-banner-area" style="background-image: url('img/banner/5.jpg');">
             <div class="container">
-                <div class="row about-page1-inner">
-                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                        <div class="about-page-content-holder">
-                            <div class="content-box">
-                                <h2>ENGAGE :- The Recruitment Drive</h2>
-                                <p>
-                                    Students of IIGM have shown very strong commitment towards the livestock sector and
-                                    operations and are prospective candidate to be groomed into grassroot
-                                    entrepreneurial
-                                    leadership. IIGM Opens doors to all Enterprises and C O s who are planning or are
-                                    having livestock operations in their project base. Students have been exposed to all
-                                    facets of
-                                    the livestock value chain and have immense potential for transformative commitment
-                                    and action within your organization.
-                                </p>
+                <div class="pagination-area">
+                    <h1>Admission</h1>
+                    <ul>
+                        <li><a href="#">Home</a> -</li>
+                        <li>Admission</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- About Page 3 Area Start Here -->
+        <!-- Inner Page Banner Area End Here -->
+        <!-- Registration Page Area Start Here -->
+        <div class="registration-page-area">
+            <div class="container">
+                <h2 class="sidebar-title">Enquiry</h2>
+                <div class="registration-details-area inner-page-padding">
+                    <form id="checkout-form" method="post"
+                        action="https://backend.iigminstitute.com/api/admission/admissionEnquiry">
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <label class="control-label" for="first-name">Full Name *</label>
+                                    <input type="text" id="first-name" name="fullName" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <label class="control-label" for="last-name">Age *</label>
+                                    <input type="text" id="last-name" name="age" class="form-control">
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                        <div class="about-page-img-holder">
-                            <img src="img/placement.jpg" class="img-responsive" alt="about">
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <label class="control-label" for="email">E-mail Address *</label>
+                                    <input type="text" id="email" name="email" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <label class="control-label" for="phone">Phone *</label>
+                                    <input type="text" id="phone" name="phone" class="form-control">
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <label class="control-label" for="country">Country</label>
+                                    <div class="custom-select">
+                                        <select id="country" name="country" class='select2'>
+                                            <option value="None Selected">Select your country</option>
+                                            <option value="India">India</option>
+                                            <option value="Bangladesh">Bangladesh</option>
+                                            <option value="Spain">Spain</option>
+                                            <option value="Belgium">Belgium</option>
+                                            <option value="Ecuador">Ecuador</option>
+                                            <option value="Ghana">Ghana</option>
+                                            <option value="SOuth Africa">South Africa</option>
+                                            <option value="Pakistan">Pakistan</option>
+                                            <option value="Thailand">Thailand</option>
+                                            <option value="Malaysia">Malaysia</option>
+                                            <option value="Italy">Italy</option>
+                                            <option value="Japan">Japan</option>
+                                            <option value="Germany">Germany</option>
+                                            <option value="USA">USA</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <label class="control-label" for="town-city">Town / City</label>
+                                    <input type="text" id="town-city" name="city" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <label class="control-label" for="country">Select Course</label>
+                                    <div class="custom-select">
+                                        <select id="course" name="course" class='select2'>
+                                            <option value="None">Select your course</option>
+                                            <option value="Commercial Goat Farming And Management">Commercial Goat
+                                                Farming and Management</option>
+                                            <option value="Livestock Entrepreneurship And Business Management">Livestock
+                                                Entrepreneurship And Business Management
+                                            </option>
+                                            <option value="Livestock Based Livelihoods Project Management (LLPM)">
+                                                Livestock Based Livelihoods Project Management (LLPM)
+                                            </option>
+                                            <option value="Goat Value Chain Management">Goat Value Chain Management
+                                            </option>
+                                            <option value="Diploma in Livestock Entrepreneurship and Business
+                                            Management">Diploma in Livestock Entrepreneurship and Business
+                                                Management</option>
+
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <label class="control-label" for="town-city">Mode of course</label>
+                                    <div class="custom-select">
+                                        <select id="course" name="mode" class='select2'>
+                                            <option value="None">Select your course type</option>
+                                            <option value="Online">Online</option>
+                                            <option value="Residential">Residential</option>
+                                            <option value="Hybrid">Hybrid</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                <div class="form-group">
+                                    <label class="control-label">About Me(optional)</label>
+                                    <textarea name="about" type="text" id="address-line1" class="form-control"
+                                        rows="5"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                <div class="pLace-order mt-30">
+                                    <button class="view-all-accent-btn disabled" type="button" id="submit-btn"
+                                       >Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
-
-        <div class="brand-area">
-            <div class="container">
-                <div class="rc-carousel" data-loop="true" data-items="4" data-margin="30" data-autoplay="true"
-                    data-autoplay-timeout="5000" data-smart-speed="2000" data-dots="false" data-nav="false"
-                    data-nav-speed="false" data-r-x-small="2" data-r-x-small-nav="false" data-r-x-small-dots="false"
-                    data-r-x-medium="3" data-r-x-medium-nav="false" data-r-x-medium-dots="false" data-r-small="4"
-                    data-r-small-nav="false" data-r-small-dots="false" data-r-medium="4" data-r-medium-nav="false"
-                    data-r-medium-dots="false" data-r-large="4" data-r-large-nav="false" data-r-large-dots="false">
-                    <div class="brand-area-box">
-                        <a href="#"><img src="img/brand/1.jpg" alt="brand"></a>
-                    </div>
-                    <div class="brand-area-box">
-                        <a href="#"><img src="img/brand/2.jpg" alt="brand"></a>
-                    </div>
-                    <div class="brand-area-box">
-                        <a href="#"><img src="img/brand/3.jpg" alt="brand"></a>
-                    </div>
-                    <div class="brand-area-box">
-                        <a href="#"><img src="img/brand/4.jpg" alt="brand"></a>
-                    </div>
-                    <div class="brand-area-box">
-                        <a href="#"><img src="img/brand/5.jpg" alt="brand"></a>
-                    </div>
-                    <div class="brand-area-box">
-                        <a href="#"><img src="img/brand/6.jpg" alt="brand"></a>
-                    </div>
-                    <div class="brand-area-box">
-                        <a href="#"><img src="img/brand/7.jpg" alt="brand"></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Brand Area End Here -->
-
-        <!-- Footer Area Start Here -->
+        <!-- Registration Page Area End Here -->
+        <!-- <!Footer Area Start Here -->
         <footer>
             <div class="footer-area-top">
                 <div class="container">
@@ -329,11 +455,9 @@
                                 <a href="index.html"><img class="img-responsive" src="img/logo-footer.jpg"
                                         alt="logo"></a>
                                 <div class="footer-about">
-                                    <p>IIGM is a global practice oriented institute nurturing entrepreneurship
-                                        in
-                                        natural resource management. IIGM is registered legally as Foundation
-                                        for
-                                        Incubation in Livestock , Entrepreneurship and Research.</p>
+                                    <p>IIGM is a global practice oriented institute nurturing entrepreneurship in
+                                        natural resource management. IIGM is registered legally as Foundation for
+                                        Incubation in Livestock , Entrepreneurship and Research</p>
                                 </div>
                                 <ul class="footer-social">
                                     <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
@@ -341,8 +465,7 @@
                                     <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
                                     <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
                                     <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-                                    </li>
+                                    <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -362,9 +485,9 @@
                                         <ul>
                                             <li><a href="#">Courses</a></li>
                                             <li><a href="#">About Us</a></li>
-                                           <li><a href="privacypolicy.html">Privacy Policy</a></li>
-                                                      <li><a href="refundpolicy.html">Refund Policy</a></li>
-                                                                           </ul>
+                                            <li><a href="privacypolicy.html">Privacy Policy</a></li>
+                                            <li><a href="refundpolicy.html">Refund Policy</a></li>
+                                        </ul>
                                     </li>
                                 </ul>
                             </div>
@@ -374,9 +497,7 @@
                                 <h3>Information</h3>
                                 <ul class="corporate-address">
                                     <li><i class="fa fa-phone" aria-hidden="true"></i><a href="Phone:(01)800433633">
-                                            9565777770
-
-                                        </a></li>
+                                            9565777770 </a></li>
                                     <li><i class="fa fa-envelope-o" aria-hidden="true"></i>info@iigminstitute.com
                                     </li>
                                 </ul>
@@ -432,40 +553,110 @@
             </div>
         </footer>
         <!-- Footer Area End Here -->
-        <!-- Preloader Start Here -->
-        <div id="preloader"></div>
-        <!-- Preloader End Here -->
-        <!-- jquery-->
-        <script src="js/jquery-2.2.4.min.js" type="text/javascript"></script>
-        <!-- Plugins js -->
-        <script src="js/plugins.js" type="text/javascript"></script>
-        <!-- Bootstrap js -->
-        <script src="js/bootstrap.min.js" type="text/javascript"></script>
-        <!-- WOW JS -->
-        <script src="js/wow.min.js"></script>
-        <!-- Nivo slider js -->
-        <script src="vendor/slider/js/jquery.nivo.slider.js" type="text/javascript"></script>
-        <script src="vendor/slider/home.js" type="text/javascript"></script>
-        <!-- Owl Cauosel JS -->
-        <script src="vendor/OwlCarousel/owl.carousel.min.js" type="text/javascript"></script>
-        <!-- Meanmenu Js -->
-        <script src="js/jquery.meanmenu.min.js" type="text/javascript"></script>
-        <!-- Srollup js -->
-        <script src="js/jquery.scrollUp.min.js" type="text/javascript"></script>
-        <!-- jquery.counterup js -->
-        <script src="js/jquery.counterup.min.js"></script>
-        <script src="js/waypoints.min.js"></script>
-        <!-- Countdown js -->
-        <script src="js/jquery.countdown.min.js" type="text/javascript"></script>
-        <!-- Isotope js -->
-        <script src="js/isotope.pkgd.min.js" type="text/javascript"></script>
-        <!-- Magic Popup js -->
-        <script src="js/jquery.magnific-popup.min.js" type="text/javascript"></script>
-        <!-- Custom Js -->
-        <script src="js/main.js" type="text/javascript"></script>
+    </div>
+    <!-- Preloader Start Here -->
+    <div id="preloader"></div>
+    <!-- Preloader End Here -->
+    <!-- jquery-->
+    <script src="js/jquery-2.2.4.min.js" type="text/javascript"></script>
+    <!-- Plugins js -->
+    <script src="js/plugins.js" type="text/javascript"></script>
+    <!-- Bootstrap js -->
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <!-- WOW JS -->
+    <script src="js/wow.min.js"></script>
+    <!-- Nivo slider js -->
+    <script src="vendor/slider/js/jquery.nivo.slider.js" type="text/javascript"></script>
+    <script src="vendor/slider/home.js" type="text/javascript"></script>
+    <!-- Owl Cauosel JS -->
+    <script src="vendor/OwlCarousel/owl.carousel.min.js" type="text/javascript"></script>
+    <!-- Meanmenu Js -->
+    <script src="js/jquery.meanmenu.min.js" type="text/javascript"></script>
+    <!-- Srollup js -->
+    <script src="js/jquery.scrollUp.min.js" type="text/javascript"></script>
+    <!-- jquery.counterup js -->
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <!-- Countdown js -->
+    <script src="js/jquery.countdown.min.js" type="text/javascript"></script>
+    <!-- Isotope js -->
+    <script src="js/isotope.pkgd.min.js" type="text/javascript"></script>
+    <!-- Select2 Js -->
+    <script src="js/select2.min.js" type="text/javascript"></script>
+    <!-- Nouislider Js -->
+    <script src="vendor/noUiSlider/nouislider.min.js" type="text/javascript"></script>
+    <!-- Validator js -->
+    <script src="js/validator.min.js" type="text/javascript"></script>
+    <!-- Magic Popup js -->
+    <script src="js/jquery.magnific-popup.min.js" type="text/javascript"></script>
+    <!-- Custom Js -->
+    <script src="js/main.js" type="text/javascript"></script>
+    <script>
+        const submitButton = document.getElementById("submit-btn");
+        // console.log('submit',submitButton);
+        submitButton.addEventListener("click", async () => {
+
+            // event.preventDefault();
+            // console.log('click');
+    
+            // Assuming the form has an ID of "checkout-form"
+            const form = document.getElementById("checkout-form");
+    
+            // Get URL for the API endpoint
+            const url = form.action;
+    
+            try {
+                // Form field instance
+                const formFields = new FormData(form);
+                // console.log('formfield',formFields);
+    
+                // Call the `postFormFieldsAsJson()` function 
+                const responseData = await postFormFieldsAsJson({ url, formFields });
+    
+                if (responseData.status) {
+                    alert("Admission form successfully submitted. We will get back to you shortly.");
+                    form.reset();
+                } else {
+                    alert("Failed to submit admission form. Please try again.");
+                }
+            } catch (error) {
+                // Handle the error here.
+                console.error(`An error has occurred: ${error}`);
+            }
+            // return false;
+        });
+    
+        async function postFormFieldsAsJson({ url, formFields }) {
+            // Create an object from the form data entries
+            const formDataObject = Object.fromEntries(formFields.entries());
+    
+            // Format the plain form data as JSON
+            const formDataJsonString = JSON.stringify(formDataObject);
+    
+            // Set the fetch options (headers, body)
+            const fetchOptions = {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: formDataJsonString,
+            };
+    
+            // Get the response body as JSON
+            // If the response was not OK, throw an error
+            const res = await fetch(url, fetchOptions);
+            // console.log(res);
+                        // If the response is not ok, throw an error (for debugging)
+            if (!res.ok) {
+                const error = await res.text();
+                throw new Error(error);
+            }
+            return res;
+        }
+    </script>    
 </body>
 
 
-<!-- Mirrored from www.IIGM.com/demo/html/academics/academics/about3.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 07 Apr 2023 12:09:49 GMT -->
+<!-- Mirrored from www.IIGM.com/demo/html/academics/academics/registration.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 07 Apr 2023 12:10:21 GMT -->
 
 </html>

@@ -1,0 +1,36 @@
+.about-page-img-holder {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.formfield {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+.labelfield {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.inputfield {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+}
+
+.qrimage {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 12px;
+}
