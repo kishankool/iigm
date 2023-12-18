@@ -34,3 +34,60 @@
     height: auto;
     margin-bottom: 12px;
 }
+.courses-content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.courses-info {
+    list-style: none;
+    padding: 0;
+}
+
+.video-container {
+    width: 50%; /* Adjust the width as needed */
+    box-sizing: border-box;
+    padding: 20px;
+}
+.content-wrapper{
+    width: 50%;
+}
+.new-year-offer {
+    color: red;
+    font-weight: bold;
+}
+
+.original-price {
+    text-decoration: line-through;
+}
+.video-description {
+    margin-top: 10px;
+    font-style: italic;
+}
+.buy-now-button {
+    margin-top: 15px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+/* Responsive styling */
+@media (max-width: 768px) {
+    .courses-content-wrapper {
+        flex-direction: column;
+    }
+
+    .video-container {
+        width: 100%;
+    }
+    .content-wrapper{
+        width: 100%;
+    }
+}
