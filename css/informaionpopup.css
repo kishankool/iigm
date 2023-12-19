@@ -19,6 +19,9 @@
     z-index: 1000;
     color: #002147;
 }
+.main-text{
+    color: #002147;
+}
 .popup {
     display: flex;
     flex-direction: column;
