@@ -1,10 +1,10 @@
-.iformationpopup {
+/* .iformationpopup {
     font-family: 'Arial', sans-serif;
     margin: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-}
+} */
 
 .overlay {
     display: none;
@@ -17,22 +17,22 @@
     align-items: center;
     justify-content: center;
     z-index: 1000;
-}
-.popposition{
-    display: flex;
+    color: #002147;
 }
 .popup {
+    display: flex;
+    flex-direction: column;
     background: #fff;  
     padding: 20px;
     border-radius: 5px;
     text-align: center;
 }
+.popposition{
+    align-self: flex-end;
+}
 
 .close {
-    font-size: 30px;
     cursor: pointer;
-    z-index: 1000;
-    justify-content: start;
 }
 
 form {
@@ -42,6 +42,7 @@ form {
 label {
     display: block;
     margin-bottom: 5px;
+    color: #002147;
 }
 
 input {
@@ -52,10 +53,11 @@ input {
 }
 
 button {
-    background-color: #4caf50;
+    background-color: #fdc800;
     color: #fff;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    color: #002147;
 }
