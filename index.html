@@ -75,7 +75,7 @@
   <body>
     <div class="iformationpopup">
       <div class="overlay" id="overlay">
-          <div class="popup">
+          <div class="popup" id="popup">
               <div class="popposition">
                   <button class="close" onclick="closePopup()">&times;</button>
               </div>
@@ -83,7 +83,7 @@
               <p>We are launching a new course on December 25th.Enroll Now!</p>
               
               <!-- Replace anchor tag with a button -->
-              <button onclick="window.location.href='certificatecourse.html'"><b>Checkout</b></button>
+              <button onclick="window.location.href='certificatecourse.html'"><b>Checkout Courses</b></button>
           </div>
       </div>
   </div>
@@ -1461,42 +1461,7 @@
     <script src="js/jquery.gridrotator.js" type="text/javascript"></script>
     <!-- Custom Js -->
     <script src="js/main.js" type="text/javascript"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        // Check if the user has accepted cookies before
-        if (!localStorage.getItem("cookiesAccepted")) {
-          // Show the cookie dialog if not accepted
-          showCookieDialog();
-        }
-
-        // Add click event listener to the "Accept Cookies" button
-        document
-          .getElementById("acceptCookiesBtn")
-          .addEventListener("click", function () {
-            // Hide the cookie dialog
-            hideCookieDialog();
-
-            // Set a flag in localStorage to remember that the user has accepted cookies
-            localStorage.setItem("cookiesAccepted", true);
-          });
-      });
-
-      function showCookieDialog() {
-        document.getElementById("cookieDialog").style.display = "block";
-      }
-
-      function hideCookieDialog() {
-        document.getElementById("cookieDialog").style.display = "none";
-      }
-      document.addEventListener("DOMContentLoaded", function () {
-        setTimeout(function () {
-          document.getElementById("overlay").style.display = "flex";
-        }, 3000); // Display the popup after 3 seconds
-      });
-
-      function closePopup() {
-        document.getElementById("overlay").style.display = "none";
-      }
+    <script src="js/information-popup.js" type="text/javascript">
     </script>
   </body>
 
