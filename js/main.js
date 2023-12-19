@@ -161,7 +161,7 @@
     $(window).on('load', function() {
 
         // Page Preloader
-        $('#preloader').fadeOut('slow', function() {
+        $('#preloader').fadeOut('fast', function() {
             $(this).remove();
         });
 
