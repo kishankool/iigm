@@ -1,2 +1,2 @@
-# iigm
+# IIGMA
 About Us Website
