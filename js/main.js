@@ -161,9 +161,9 @@
     $(window).on('load', function() {
 
         // Page Preloader
-        $('#preloader').fadeOut('slow', function() {
-            $(this).remove();
-        });
+        // $('#preloader').fadeOut('fast', function() {
+        //     $(this).remove();
+        // });
 
         /*-------------------------------------
          jQuery for Isotope initialization
@@ -549,3 +549,7 @@
     }
 
 })(jQuery);
+
+document.addEventListener("DOMContentLoaded",function(){
+    document.getElementById("preloader").remove();
+})
