@@ -35,6 +35,7 @@
 
 .original-price {
     text-decoration: line-through;
+    font-size: 30px;
 }
 .video-description {
     margin-top: 10px;
@@ -46,6 +47,14 @@
 }
 .fontweight{
     font-weight: 600;
+}
+.alignmentoffer
+{
+    text-align: center;
+}
+.color_font-course{
+    font-size: 29px;
+    color: #63677f;
 }
 .buy-now-button {
     margin-top: 15px;
