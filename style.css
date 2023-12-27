@@ -1220,12 +1220,10 @@ h2.sidebar-title:before {
   background: transparent;
   text-transform: uppercase;
   font-size: 12px;
-<<<<<<< HEAD
   font-weight: 700;
   display: inline-block;
   border: none;
   width: 100%;
-  border: 1px solid #002147;
   text-align: center;
   -webkit-transition: all 0.5s ease-out;
   -moz-transition: all 0.5s ease-out;
@@ -1239,8 +1237,6 @@ h2.sidebar-title:before {
   background: transparent;
   text-transform: uppercase;
   font-size: 12px;
-=======
->>>>>>> c5382bf61c772275e6fcb1db39c123f5ca775a2c
   font-weight: 700;
   display: inline-block;
   border: none;
