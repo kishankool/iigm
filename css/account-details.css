@@ -24,6 +24,7 @@
 .container-pop-up {
   position: fixed;
   display: flex;
+  gap : 20px;
   flex-direction: column;
   max-width: 600px;
   background-color: #fff;
