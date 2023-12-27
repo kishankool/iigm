@@ -50,6 +50,7 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="css/paymentform.css"/>
     <!-- Modernizr Js -->
+    <link rel="stylesheet" href="css/account-details.css"/>
     <script src="js/modernizr-2.8.3.min.js"></script>
     <!-- Google tag (gtag.js) -->
     <script
@@ -225,7 +226,7 @@
                     </ul>
                   </nav>
                 </div>
-                <!-- <div class="col-xl-1 col-lg-1 d-none d-lg-block">
+                       <!-- <div class="col-xl-1 col-lg-1 d-none d-lg-block">
                                 <div class="header-search">
                                     <form>
                                         <input type="text" class="search-form" placeholder="Search...." required="">
@@ -362,12 +363,31 @@
                   class="img-responsive"
                   alt="course"
                 /> -->
+                <div class="overlay-2" id="overlay-2"></div>
+
+                <div class="container-pop-up" id="popup-Container">
+                  <h3>Bank Account Details</h3>
+              
+                  <div class="account-details">
+                    <p><strong>Account Holder Name:</strong> John Doe</p>
+                    <p><strong>Account Number:</strong> XXXX-XXXX-XXXX-XXXX</p>
+                    <p><strong>IFSC Code:</strong> XXXX0123456</p>
+                  </div>
+              
+                  <div class="qr-code">
+                    <!-- Placeholder QR Code image -->
+                    <img src="img/qr_code.jpg" alt="QR Code" class="img-size">
+                  </div>
+              
+                  <button onclick="closePopup()">Close</button>
+                </div>
                 <div class="">
                   <!-- Add your video embed code or video tag here -->
                   <!-- Example using YouTube embed code -->
                   <iframe width="100%" height="315" src="https://www.youtube.com/embed/zwbtE-vaBW0" frameborder="0" allowfullscreen></iframe>
 
                 </div>
+                
                 <div class="course-details-tab-area">
                   <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12">
@@ -410,6 +430,22 @@
                             aria-controls="menu-3"
                             aria-selected="false"
                             >Lecturer</a
+                          >
+                        </li>
+                        <li class="menu-item" role="presentation">
+                          <a
+                            href="./document/Commercial Goat Farming - Online (3).pdf"
+                            role="tab"
+                            target="_blank"
+                            >Download In English</a
+                          >
+                        </li>
+                        <li class="menu-item" role="presentation">
+                          <a
+                            href="./document/Commercial Goat Farming Hindi.pdf"
+                            role="tab"
+                            target="_blank"
+                            >Download In Hindi</a
                           >
                         </li>
                       </ul>
@@ -1001,15 +1037,21 @@
                         class="enroll-btn"
                         >Enroll In This Course</a
                       >
-                      <p>
+                        <p>
+                          <a href="https://online.iigminstitute.com" class="go-to-course">Go To Course Portal</a>
+                        </p>
+                        
+                          <button class="popup-btn" onclick="openPopup()">Make a Payment</button>
+
+                        <!-- <h1 style="font-size: 17px;">DOWNLOAD  BROCHURE
+                        <p>
                       <a href="./document/Commercial Goat Farming - Online (3).pdf" class="download-btn">Download In English</a>
                       </p>
                       <p>
                       <a href="./document/Commercial Goat Farming Hindi.pdf" class="download-btn">Download In HINDI</a>
                       </p>
-                      <p>
-                        <a href="https://online.iigminstitute.com" class="download-btn">IIGMA ONLINE</a>
-                      </p>
+                      </h1> -->
+                      
                     </div>
                   </div>
                 </div>
@@ -1275,6 +1317,7 @@
     <script src="js/jquery-2.2.4.min.js" type="text/javascript"></script>
     <!-- Plugins js -->
     <script src="js/plugins.js" type="text/javascript"></script>
+    <script src="js/acconut-detail.js" type="text/javascript"></script>
     <!-- Bootstrap js -->
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
     <!-- WOW JS -->

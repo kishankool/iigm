@@ -1232,6 +1232,24 @@ h2.sidebar-title:before {
   -o-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
 }
+.go-to-course{
+  color: #002147;
+  padding: 18px 0;
+  background: transparent;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  display: inline-block;
+  border: none;
+  width: 100%;
+  border: 1px solid #002147;
+  text-align: center;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
 .download-btn:before {
   content: "\f019";
   position: absolute;
@@ -1247,6 +1265,16 @@ h2.sidebar-title:before {
   z-index: 1;
 }
 .download-btn:hover {
+  border: 1px solid #fdc800;
+  background: #fdc800;
+  color: #FFFFFF;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+.go-to-course:hover {
   border: 1px solid #fdc800;
   background: #fdc800;
   color: #FFFFFF;
