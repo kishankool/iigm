@@ -1,0 +1,84 @@
+/* .pop-up-account {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  } */
+
+#overlay-payment {
+  display: none;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000000;
+}
+
+.container-pop-up {
+  position: fixed;
+  display: flex;
+  gap : 20px;
+  flex-direction: column;
+  max-width: 600px;
+  background-color: #fff;
+  width: 80%;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.bank-header{
+  align-self: center;
+}
+
+.account-details {
+  display: flex;
+  gap : 10px;
+}
+
+.account-information{
+  flex : 1;
+}
+
+.qr-code {
+  display: flex;
+  justify-content: center;
+}
+
+.img-size {
+  height: 300px;
+  width: 300px;
+}
+#payment-close{
+  width: 50%;
+  align-self: center;
+  background-color: #fdc800;
+  color: #002147;
+  border: none;
+  border-radius: 10px;
+}
+.popup-btn {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+@media (max-width:475px) {
+
+  .account-details{
+    flex-direction: column;
+  }
+  
+}
