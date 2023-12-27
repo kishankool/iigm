@@ -39,10 +39,11 @@
 
 .account-details {
   display: flex;
+  gap : 10px;
 }
 
 .account-information{
-  
+  flex : 1;
 }
 
 .qr-code {
@@ -72,4 +73,12 @@
   display: inline-block;
   font-size: 16px;
   cursor: pointer;
+}
+
+@media (max-width:475px) {
+
+  .account-details{
+    flex-direction: column;
+  }
+  
 }
