@@ -23,6 +23,8 @@
 
 .container-pop-up {
   position: fixed;
+  display: flex;
+  flex-direction: column;
   max-width: 600px;
   background-color: #fff;
   width: 80%;
@@ -30,14 +32,34 @@
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+.bank-header{
+  align-self: center;
+}
+
+.account-details {
+  display: flex;
+}
+
+.account-information{
+  
+}
 
 .qr-code {
   display: flex;
   justify-content: center;
 }
+
 .img-size {
-  height: 100px;
-  width: 100px;
+  height: 300px;
+  width: 300px;
+}
+#payment-close{
+  width: 50%;
+  align-self: center;
+  background-color: #fdc800;
+  color: #002147;
+  border: none;
+  border-radius: 10px;
 }
 .popup-btn {
   background-color: #4caf50;

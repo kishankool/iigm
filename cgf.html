@@ -317,17 +317,18 @@
       
       <div class="overlay" id="overlay-payment">
         <div class="container-pop-up" id="popup-Container">
-          <h3>Bank Account Details</h3>
+          <h3 class="bank-header">Bank Account Details</h3>
           <div class="account-details">
-            <p><strong>Account Holder Name:</strong> John Doe</p>
-            <p><strong>Account Number:</strong> XXXX-XXXX-XXXX-XXXX</p>
-            <p><strong>IFSC Code:</strong> XXXX0123456</p>
+            <div class="account-information">
+              <p><strong>Account Holder Name:</strong> John Doe</p>
+              <p><strong>Account Number:</strong> XXXX-XXXX-XXXX-XXXX</p>
+              <p><strong>IFSC Code:</strong> XXXX0123456</p>
+            </div>
+            <div class="qr-code">
+              <!-- Placeholder QR Code image -->
+              <img src="img/qr_code.jpg" alt="QR Code" class="img-size">
+            </div>  
           </div>
-      
-          <div class="qr-code">
-            <!-- Placeholder QR Code image -->
-            <img src="img/qr_code.jpg" alt="QR Code" class="img-size">
-          </div>  
           <button id="payment-close">Close</button>
         </div>
       </div>
