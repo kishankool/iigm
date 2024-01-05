@@ -1217,6 +1217,24 @@ h2.sidebar-title:before {
   background: transparent;
   color: #fdc800;
 }
+.download-btn-list
+{
+  color: #002147;
+  padding: 18px 0;
+  background: transparent;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  display: inline-block;
+  border: none;
+  width: 100%;
+  text-align: center;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
 .download-btn {
   position: relative;
   color: #002147;
