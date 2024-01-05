@@ -586,3 +586,12 @@ let closeButton = document.getElementById("payment-close");
 closeButton.addEventListener("click", function () {
   popUpDiv.style.display = "none";
 });
+document.addEventListener("DOMContentLoaded", function () {
+  // Hide download options initially
+  var options = document.querySelector('.download-language');
+  options.style.display = 'none';
+});
+function toggleOptions34() {
+  var options = document.querySelector('.download-language');
+  options.style.display = (options.style.display === 'none' || options.style.display === '') ? 'block' : 'none';
+}
